@@ -1,0 +1,11 @@
+# External sources
+node_modules/
+
+# Build
+lib/
+
+# Flow
+/flow-typed
+
+# Logfiles
+yarn-*.log

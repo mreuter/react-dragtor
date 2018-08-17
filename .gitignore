@@ -1,0 +1,8 @@
+# Modules
+node_modules/
+
+# Types
+flow-typed/
+
+# Tests
+coverage/

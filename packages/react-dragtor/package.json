@@ -1,0 +1,15 @@
+{
+  "name": "react-dragtor",
+  "version": "0.9.0",
+  "description": "A HTML5 drag and drop library for React",
+  "browser": "lib/index.js",
+  "keywords": [
+    "html5",
+    "drag",
+    "drop",
+    "drag and drop",
+    "dnd"
+  ],
+  "author": "Marc Reuter <marc@twisted-pair.de>",
+  "license": "MIT"
+}
