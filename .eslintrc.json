@@ -6,10 +6,11 @@
     "node": true
   },
   "extends": [
-    "eslint:recommended",
+    "airbnb",
     "plugin:flowtype/recommended",
     "plugin:react/recommended",
-    "plugin:import/recommended"
+    "plugin:import/recommended",
+    "plugin:compat/recommended"
   ],
   "parserOptions": {
     "ecmaVersion": 2017,
@@ -19,87 +20,12 @@
       "generators": true
     }
   },
-  "plugins": [
-    "prefer-object-spread",
-    "flowtype",
-    "react",
-    "import"
-  ],
+  "plugins": ["prefer-object-spread", "flowtype", "react", "import", "compat"],
   "rules": {
-    "array-bracket-spacing": ["error", "never"],
-    "block-spacing": ["error", "always"],
-    "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
-    "camelcase": ["error", { "properties": "always" }],
-    "comma-dangle": ["error", {
-      "arrays": "only-multiline",
-      "objects": "only-multiline",
-      "imports": "never",
-      "exports": "never",
-      "functions": "ignore"
-    }],
-    "comma-spacing": ["error", { "before": false, "after": true }],
-    "comma-style": ["error", "last"],
-    "computed-property-spacing": ["error", "never"],
-    "curly": ["error", "multi-line"],
-    "eol-last": ["error", "always"],
-    "func-call-spacing": ["error", "never"],
-    "func-name-matching": ["error", "always"],
-    "func-style": ["error", "expression"],
-    "function-paren-newline": ["error", "consistent"],
-    "implicit-arrow-linebreak": ["error", "beside"],
-    "indent": ["error", 2],
-    "jsx-quotes": ["error", "prefer-double"],
-    "key-spacing": ["error", {"beforeColon": false, "afterColon": true}],
-    "keyword-spacing": ["error", {"before": true, "after": true}],
-    "linebreak-style": ["error", "unix"],
-    "lines-between-class-members": ["error", "always"],
-    "max-len": ["warn", { "code": 100 }],
-    "max-lines": ["warn", 300],
-    "multiline-comment-style": ["error", "starred-block"],
-    "multiline-ternary": ["error", "always-multiline"],
-    "new-cap": ["error", {"newIsCap": true}],
-    "new-parens": "error",
-    "no-lonely-if": "error",
-    "no-new-object": "error",
-    "no-tabs": "error",
-    "no-trailing-spaces": "error",
-    "no-unneeded-ternary": "error",
-    "no-unused-vars": ["error", {"ignoreRestSiblings": true}],
-    "no-whitespace-before-property": "error",
-    "nonblock-statement-body-position": ["error", "beside"],
-    "object-curly-spacing": ["error", "never"],
-    "operator-linebreak": ["error", "after", { "overrides": { "?": "before", ":": "before" } }],
-    "padded-blocks": ["error", "never"],
-    "prefer-object-spread": "error",
-    "quote-props": ["error", "as-needed"],
-    "quotes": ["error", "single"],
-    "semi": ["error", "always"],
-    "semi-spacing": ["error", {"before": false, "after": true}],
-    "semi-style": ["error", "last"],
-    "space-before-blocks": ["error", "always"],
-    "space-before-function-paren": ["error", "never"],
-    "space-in-parens": ["error", "never"],
-    "space-infix-ops": "error",
-    "space-unary-ops": ["error", {"words": true, "nonwords": false}],
-    "spaced-comment": ["error", "always", { "line": { "exceptions": ["-"] }, "block": {"exceptions": ["*"] }}],
-    "switch-colon-spacing": ["error", {"after": true, "before": false}],
-    "template-tag-spacing": ["error", "never"],
-    "unicode-bom": ["error", "never"],
-    // ES6
-    "arrow-body-style": ["error", "as-needed"],
-    "arrow-parens": ["error", "as-needed", { "requireForBlockBody": false }],
-    "arrow-spacing": ["error", { "before": true, "after": true }],
-    "generator-star-spacing": ["error", {"before": false, "after": true}],
-    "no-useless-computed-key": "error",
-    "no-useless-constructor": "error",
-    "no-var": "error",
-    "prefer-const": "error",
-    "prefer-destructuring": ["warn", {"object": true, "array": false}],
-    "prefer-numeric-literals": "warn",
-    "prefer-rest-params": "error",
-    "prefer-spread": "error",
-    "rest-spread-spacing": ["error", "never"],
-    "template-curly-spacing": ["error", "never"],
-    "yield-star-spacing": ["error", "before"]
+    "react/jsx-filename-extension": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      { "devDependencies": true, "optionalDependencies": false, "peerDependencies": true }
+    ]
   }
 }

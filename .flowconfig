@@ -8,5 +8,10 @@
 [lints]
 
 [options]
+module.file_ext=.md
+module.file_ext=.js
+module.file_ext=.mjs
+module.file_ext=.jsx
+module.file_ext=.json
 
 [strict]

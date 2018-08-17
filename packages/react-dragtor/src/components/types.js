@@ -6,3 +6,7 @@
  *
  * @flow
  */
+
+import * as React from 'react';
+
+export type AnyElement = React.Element<React.ComponentType<Object>>;

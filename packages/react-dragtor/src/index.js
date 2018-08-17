@@ -7,6 +7,29 @@
  * @flow
  */
 
-const alive = 'I am alive';
+import configureDragtor from './components/Dragtor';
+import Handler from './handler/Handler';
 
-export default alive;
+import type {
+  Driver,
+  DropEffect,
+  HandlerInterface,
+  Point,
+  SourceHandler,
+  TargetHandler,
+  HandlerOptions,
+} from './handler/types';
+
+const handlerFactory = <T>(options: HandlerOptions<T>, HandlerClass) => (
+  () => new HandlerClass(options)
+);
+
+const configureDefaultDragtor = <T>(driver: Driver, options: HandlerOptions<T>) => (
+  configureDragtor(driver, handlerFactory(options, Handler))
+);
+
+export { configureDefaultDragtor as default, configureDragtor, Handler };
+
+export type {
+  Driver, DropEffect, HandlerInterface, Point, SourceHandler, TargetHandler,
+};

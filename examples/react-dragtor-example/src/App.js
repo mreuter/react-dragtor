@@ -1,22 +1,29 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import alive from 'react-dragtor';
+/**
+ * Copyright (c) 2018-present, Marc Reuter.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ * @flow
+ */
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload. And: {alive}
-        </p>
-      </div>
-    );
-  }
-}
+import React from 'react';
+import './App.css';
+
+import * as ReactExamples from 'react-dragtor/README.md';
+import * as DriverOnlyExamples from 'react-dragtor-driver-html5/README.md';
+import Examples from './components/Examples';
+
+const App = () => (
+  <div className="App">
+    <header className="App-header">
+      <h1 className="App-title">react-dragtor e2e test examples</h1>
+    </header>
+    <section className="App-content">
+      <Examples title="React Examples" examples={ReactExamples} />
+      <Examples title="Driver only Examples" examples={DriverOnlyExamples} />
+    </section>
+  </div>
+);
 
 export default App;
