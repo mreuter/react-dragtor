@@ -12,6 +12,9 @@
     "react-dragtor": "^0.1.0",
     "react-dragtor-driver-html5": "^0.1.0"
   },
+  "engines": {
+    "node": ">=8.9.0"
+  },
   "scripts": {
     "test": "yarn test:unit",
     "test:unit": "jest",
