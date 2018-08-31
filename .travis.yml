@@ -8,4 +8,5 @@ before_install:
 install:
   - yarn add -W codecov
 script:
+  - yarn qa
   - yarn codecov
