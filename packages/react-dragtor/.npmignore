@@ -1,0 +1,6 @@
+config/
+node_modules/
+src/
+.babelrc
+.gitignore
+yarn-error.log

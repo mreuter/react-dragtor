@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Types
+flow-typed/
+
+# Tests
+coverage/
+reports/
+
+# Package management
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build
+/logs
+/build

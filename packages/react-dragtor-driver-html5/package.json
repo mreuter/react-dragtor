@@ -1,0 +1,44 @@
+{
+  "name": "react-dragtor-driver-html5",
+  "version": "0.1.0",
+  "description": "The HTML5 driver for the react-dragtor library",
+  "main": "lib/index.js",
+  "keywords": [
+    "driver",
+    "plugin",
+    "html5",
+    "drag",
+    "drop",
+    "drag and drop",
+    "dnd"
+  ],
+  "author": "Marc Reuter <marc@twisted-pair.de>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "scripts": {
+    "test": "yarn test:unit",
+    "test:unit": "jest",
+    "build:clean": "rimraf ./lib",
+    "build:compile": "webpack --config config/webpack.config.js --display-modules",
+    "build": "yarn build:clean && yarn build:compile",
+    "dev:compile": "webpack --config config/webpack.config.js --display-modules --env development",
+    "dev": "yarn build:clean && yarn dev:compile"
+  },
+  "dependencies": {
+    "invariant": "^2.2.4"
+  },
+  "devDependencies": {
+    "jest-dom": "^1.12.0"
+  },
+  "peerDependencies": {
+    "react-dragtor": "0.1.0"
+  },
+  "browserslist": [
+    ">1%",
+    "last 4 versions",
+    "Firefox ESR",
+    "not ie < 11"
+  ]
+}
