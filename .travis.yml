@@ -8,7 +8,7 @@ before_install:
 install:
   - yarn
   - yarn add -W codecov
-  - yarn flow-types install
+  - yarn flow-typed install
 script:
   - yarn build
   - yarn qa
