@@ -9,7 +9,7 @@
   "scripts": {
     "web-server-start": "lsof -t -i:7777 || http-server -p 7777 examples/react-dragtor-example/build &",
     "web-server-stop": "kill $(lsof -t -i:7777)",
-    "pretest:e2e": "lsof -t -i:7777 || (yarn workspace react-dragtor build && yarn workspace react-dragtor-driver-html5 build && yarn workspace react-dragtor-example build && yarn web-server-start)",
+    "pretest:e2e": "lsof -t -i:7777 || (yarn build && yarn web-server-start)",
     "test:e2e": "yarn nightwatch",
     "posttest:e2e": "yarn web-server-stop",
     "test": "jest",
@@ -17,7 +17,8 @@
     "flow": "flow",
     "lint": "eslint packages/** examples/**",
     "precommit": "yarn qa",
-    "prepush": "yarn qa"
+    "prepush": "yarn qa",
+    "build": "yarn workspace react-dragtor build && yarn workspace react-dragtor-driver-html5 build && yarn workspace react-dragtor-example build"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",

@@ -6,8 +6,9 @@ before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.9.4
   - export PATH="$HOME/.yarn/bin:$PATH"
 install:
-  - yarn install
   - yarn add -W codecov
+  - yarn flow-types install
 script:
+  - yarn build
   - yarn qa
   - yarn codecov
